@@ -45,9 +45,26 @@ function App() {
 		})
 	}
 
+  //функция-обработчик события в инпуте "количество товара" 
+	// const changeValue = (id, value) => {
+	// 	setCart((cart) => {
+	// 		return cart.map((product) => {
+	// 			if(product.id === id) {
+	// 				return {
+	// 					...product,
+	// 					count: value,
+	// 					priceTotal: value * product.price
+	// 				}
+	// 			}
+	// 			return product
+	// 		})
+	// 	})
+	// }
+
   return (
     <div className="App">
-      {/* <h3>Счетчик: {counter}</h3> */}
+      <h3>Счетчик: {cart.count}</h3>
+      {/* <input onChange={(e) => {changeValue( +e.target.value)}} type="number" className="count__input" min="1" max="10" value={cart}/> */}
       <button onClick={increase}>Добавить</button>
       <button onClick={decrease}>Убрать</button>
     </div>
